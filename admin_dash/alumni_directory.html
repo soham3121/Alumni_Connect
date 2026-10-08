@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory - Alumni Connect</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="header-left">
+            <div class="logo">AU</div>
+            <span class="brand-name">Alumni Connect</span>
+        </div>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search alumni...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <button class="notification-bell">
+                <i class="fas fa-bell"></i>
+                <span class="notification-count">3</span>
+            </button>
+            <div class="user-profile">
+                <i class="fas fa-user-circle user-avatar"></i>
+                <span>Admin One</span>
+                <button class="logout-btn" onclick="handleLogout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav>
+                <a href="admin-dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+                <a href="alumni_directory.html" class="menu-item active">
+                    <i class="fas fa-users"></i>
+                    Alumni Directory
+                </a>
+                <a href="events.html" class="menu-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    Events
+                </a>
+                <a href="forums.html" class="menu-item">
+                    <i class="fas fa-comments"></i>
+                    Forums
+                </a>
+                <a href="mentorship.html" class="menu-item">
+                    <i class="fas fa-handshake"></i>
+                    Mentorship
+                </a>
+                <a href="career-center.html" class="menu-item">
+                    <i class="fas fa-briefcase"></i>
+                    Career Center
+                </a>
+                <a href="profile-settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    Profile Settings
+                </a>
+                <a href="analytics.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+                <a href="announcements.html" class="menu-item">
+                    <i class="fas fa-bullhorn"></i>
+                    Announcements
+                </a>
+                <a href="admin-panel.html" class="menu-item">
+                    <i class="fas fa-user-shield"></i>
+                    Admin Panel
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Alumni Directory</h1>
+                    <p class="page-subtitle">Manage and view all alumni profiles</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Add Alumni
+                    </button>
+                </div>
+            </div>
+
+            <!-- Directory Container -->
+            <div class="directory-container">
+                <!-- Filters Section -->
+                <div class="filters-section">
+                    <div class="filter-group">
+                        <label class="filter-label">Graduation Year</label>
+                        <select class="filter-select">
+                            <option value="">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Department</label>
+                        <select class="filter-select">
+                            <option value="">All Departments</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="me">Mechanical Engineering</option>
+                            <option value="ce">Civil Engineering</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Location</label>
+                        <select class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state">
+                    <i class="fas fa-users"></i>
+                    <h3>No Alumni Found</h3>
+                    <p>The alumni directory is currently empty. Start by adding alumni profiles to build your network.</p>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Add First Alumni
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/admin-functions.js"></script>
+</body>
+</html>

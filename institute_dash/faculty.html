@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - BP Poddar Institute of Management and Technology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="../assets/logo.jpg" alt="Alumni Connect Logo">
+                </div>
+                <div class="logo-text">
+                    <h2>Alumni Connect</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                    <li class="active"><a href="faculty.html"><i class="fas fa-users"></i> Faculty</a></li>
+                    <li><a href="students.html"><i class="fas fa-user-graduate"></i> Students</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="performance.html"><i class="fas fa-chart-line"></i> Performance</a></li>
+                    <li><a href="announcements.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                    <li><a href="departments.html"><i class="fas fa-building"></i> Departments</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-circle">BPPIMT</div>
+                    <div class="logo-text">
+                        <h2>BP Poddar Institute</h2>
+                        <p class="institute-motto">Management and Technology (BPPIMT), Kolkata</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-container">
+                        <form>
+                            <input type="text" placeholder="Search faculty..." class="search-input">
+                            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile" id="userProfileBtn">
+                        <span class="name">Institution</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-info">
+                            <div class="user-avatar">I</div>
+                            <div class="user-details">
+                                <div class="user-name">Institution Admin</div>
+                                <div class="user-email">admin@bppimt.edu.in</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>Profile Settings</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Account Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>Faculty Management</h1>
+                    <p>Manage faculty profiles, track academic contributions, and maintain teaching records.</p>
+                </div>
+
+                <!-- Faculty Actions -->
+                <div class="alumni-actions">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>Import Faculty Data</h3>
+                            <p>Upload a CSV file containing faculty information to bulk import profiles and details.</p>
+                            <button class="btn btn-primary" onclick="showFacultyUploadModal()">
+                                <i class="fas fa-file-csv"></i>
+                                Upload CSV File
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>Add Faculty Member</h3>
+                            <p>Manually add individual faculty profiles with academic credentials and details.</p>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-plus"></i>
+                                Add Faculty
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>Performance Reports</h3>
+                            <p>Generate faculty performance reports, teaching evaluations, and research summaries.</p>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-file-chart-line"></i>
+                                View Reports
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">187</div>
+                            <div class="stat-label">Total Faculty</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">42</div>
+                            <div class="stat-label">PhD Holders</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">28</div>
+                            <div class="stat-label">Research Projects</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">4.2</div>
+                            <div class="stat-label">Avg Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Faculty Activity -->
+                <div class="recent-activity">
+                    <h2>Recent Faculty Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>New Faculty Appointment</h4>
+                                <p>Dr. Rajesh Gupta joined as Associate Professor in Computer Science Department</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Research Publication</h4>
+                                <p>Prof. Meera Joshi published paper in IEEE Transactions on AI</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Award Recognition</h4>
+                                <p>Dr. Anil Sharma received Best Teacher Award for Academic Year 2024-25</p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Workshop Conducted</h4>
+                                <p>Faculty Development Program on "Modern Teaching Methodologies" completed</p>
+                                <span class="activity-time">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

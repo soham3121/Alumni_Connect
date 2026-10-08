@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Connect Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/alumni-dash-style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="../assets/logo.jpg" alt="Alumni Connect Logo">
+        </div>
+        <span>Alumni Connect</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-item active"><i class="material-icons">dashboard</i>Dashboard</a>
+        <a href="alumni-directory.html" class="nav-item"><i class="material-icons">groups</i>Alumni Directory</a>
+        <a href="events.html" class="nav-item"><i class="material-icons">event</i>Events</a>
+        <a href="forums.html" class="nav-item"><i class="material-icons">forum</i>Forums</a>
+        <a href="mentorship.html" class="nav-item"><i class="material-icons">school</i>Mentorship</a>
+        <a href="career-center.html" class="nav-item"><i class="material-icons">work</i>Career Center</a>
+        <a href="profile-settings.html" class="nav-item"><i class="material-icons">settings</i>Profile Settings</a>
+        <a href="give-back.html" class="nav-item"><i class="material-icons">volunteer_activism</i>Give Back</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="header">
+        <div class="welcome">Welcome back, Subhro!</div>
+        <div class="search">
+          <input type="text" placeholder="Search alumni, events...">
+        </div>
+        <div class="profile">
+          <div class="notification-badge">
+            <span></span>
+            <svg width="24" height="24" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+          </div>
+          <div class="user-info" onclick="showUserMenu()">
+            <span class="avatar">SM</span>
+            <span>Subhro Maitra</span>
+          </div>
+        </div>
+      </div>
+      <div class="summary">
+        <div class="card alumni">
+          <span class="icon material-icons">groups</span>
+          <span class="title">Total Alumni</span>
+          <span class="value">1</span>
+          <span class="desc">Registered in the platform</span>
+        </div>
+        <div class="card event">
+          <span class="icon material-icons">event</span>
+          <span class="title">Upcoming Events</span>
+          <span class="value">0</span>
+          <span class="desc">This month</span>
+        </div>
+        <div class="card message">
+          <span class="icon material-icons">chat</span>
+          <span class="title">New Messages</span>
+          <span class="value">0</span>
+          <span class="desc">Unread messages</span>
+        </div>
+        <div class="card job">
+          <span class="icon material-icons">work</span>
+          <span class="title">Job Opportunities</span>
+          <span class="value">0</span>
+          <span class="desc">Active postings</span>
+        </div>
+      </div>
+      <!-- Content Grid -->
+      <div class="content-grid">
+        <!-- Recent Activity -->
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fas fa-bell section-icon"></i>
+              Recent Activity
+            </h2>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-dot blue"></div>
+              <div class="activity-content">
+                <h4>New alumni registration</h4>
+                <p>Sarah Johnson (Class of 2020) joined</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-dot green"></div>
+              <div class="activity-content">
+                <h4>Upcoming event reminder</h4>
+                <p>Annual Alumni Gala • 2 weeks away</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-dot orange"></div>
+              <div class="activity-content">
+                <h4>New mentorship match</h4>
+                <p>You've been matched with a student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fas fa-lightning-bolt section-icon"></i>
+              Quick Actions
+            </h2>
+          </div>
+          <div class="actions-list">
+            <div class="actions-grid">
+              <div class="action-card blue">
+                <div class="action-icon blue">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div class="action-text">Find Alumni</div>
+              </div>
+              <div class="action-card green">
+                <div class="action-icon green">
+                  <i class="fas fa-calendar-plus"></i>
+                </div>
+                <div class="action-text">View Events</div>
+              </div>
+              <div class="action-card orange">
+                <div class="action-icon orange">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="action-text">Messages</div>
+              </div>
+              <div class="action-card red">
+                <div class="action-icon red">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="action-text">Donate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/alumni-dash.js"></script>
+</body>
+</html>

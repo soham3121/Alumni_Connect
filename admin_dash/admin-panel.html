@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Alumni Connect</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo">AU</div>
+            <span class="brand-name">Alumni Connect</span>
+        </div>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search alumni, events...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <button class="notification-bell">
+                <i class="fas fa-bell"></i>
+                <span class="notification-count">3</span>
+            </button>
+            <div class="user-profile">
+                <i class="fas fa-user-circle user-avatar"></i>
+                <span>Admin One</span>
+                <button class="logout-btn" onclick="handleLogout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav>
+                <a href="admin-dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="alumni_directory.html" class="menu-item">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni Directory</span>
+                </a>
+                <a href="events.html" class="menu-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+                <a href="forums.html" class="menu-item">
+                    <i class="fas fa-comments"></i>
+                    <span>Forums</span>
+                </a>
+                <a href="mentorship.html" class="menu-item">
+                    <i class="fas fa-handshake"></i>
+                    <span>Mentorship</span>
+                </a>
+                <a href="career-center.html" class="menu-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Career Center</span>
+                </a>
+                <a href="profile-settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Profile Settings</span>
+                </a>
+                <a href="analytics.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="announcements.html" class="menu-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </a>
+                <a href="admin-panel.html" class="menu-item active">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Admin Panel</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="page-header">
+                <h1>Admin Panel</h1>
+                <p class="page-subtitle">Advanced administrative tools and system management</p>
+            </section>
+
+            <!-- Empty State -->
+            <section class="empty-state">
+                <div class="empty-state-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Admin Tools Coming Soon</h3>
+                <p>Advanced administrative features will be available here, including user management, system settings, security controls, and platform configuration options.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/admin-functions.js"></script>
+</body>
+</html>

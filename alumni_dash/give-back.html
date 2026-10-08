@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give Back - Alumni Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="../assets/css/alumni-dash-style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="../assets/logo.jpg" alt="Alumni Connect Logo">
+        </div>
+        <span>Alumni Connect</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-item"><i class="material-icons">dashboard</i>Dashboard</a>
+        <a href="alumni-directory.html" class="nav-item"><i class="material-icons">groups</i>Alumni Directory</a>
+        <a href="events.html" class="nav-item"><i class="material-icons">event</i>Events</a>
+        <a href="forums.html" class="nav-item"><i class="material-icons">forum</i>Forums</a>
+        <a href="mentorship.html" class="nav-item"><i class="material-icons">school</i>Mentorship</a>
+        <a href="career-center.html" class="nav-item"><i class="material-icons">work</i>Career Center</a>
+        <a href="profile-settings.html" class="nav-item"><i class="material-icons">settings</i>Profile Settings</a>
+        <a href="give-back.html" class="nav-item active"><i class="material-icons">volunteer_activism</i>Give Back</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="header">
+        <div class="welcome">Give Back</div>
+        <div class="profile">
+          <div class="notification-badge">
+            <span>3</span>
+            <svg width="24" height="24" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+          </div>
+          <div class="user-info" onclick="showUserMenu()">
+            <span class="avatar">SM</span>
+            <span>Subhro Maitra</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="giveback-content">
+        <div class="donation-header">
+          <div class="stats">
+            <div class="amount">₹25,000</div>
+            <div class="label">Total Donated to Your Institute</div>
+          </div>
+          <button class="btn">
+            <span class="material-icons icon-18">favorite</span>
+            Donate More
+          </button>
+        </div>
+        
+        <div class="section">
+          <h2><span class="material-icons">volunteer_activism</span> Donate to Your Institution</h2>
+          
+          <div class="donation-form">
+            <div class="form-group">
+              <label for="institution">Institution</label>
+              <select id="institution">
+                <option value="your-college" selected>Your College of Engineering</option>
+                <option value="other">Other Institution</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Choose an Amount</label>
+              <div class="amount-options">
+                <div class="amount-option">₹1,000</div>
+                <div class="amount-option selected">₹5,000</div>
+                <div class="amount-option">₹10,000</div>
+                <div class="amount-option">₹25,000</div>
+                <div class="amount-option">Custom</div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fund">Select Fund</label>
+                <select id="fund">
+                  <option value="" selected disabled>Choose a Fund</option>
+                  <option value="scholarship">Scholarship Fund</option>
+                  <option value="infrastructure">Infrastructure Development</option>
+                  <option value="research">Research & Innovation</option>
+                  <option value="general">General Fund</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <select id="frequency">
+                  <option value="one-time" selected>One-time</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="quarterly">Quarterly</option>
+                  <option value="annually">Annually</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button class="btn">Proceed to Payment</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h2><span class="material-icons">history</span> Your Donation History</h2>
+          
+          <div class="history-item">
+            <div class="left">
+              <div class="title">Scholarship Fund</div>
+              <div class="date">July 15, 2025</div>
+              <a href="#" class="receipt-link">
+                <span class="material-icons icon-16">receipt</span> View Receipt
+              </a>
+            </div>
+            <div class="amount">₹15,000</div>
+          </div>
+          
+          <div class="history-item">
+            <div class="left">
+              <div class="title">Infrastructure Development</div>
+              <div class="date">March 22, 2025</div>
+              <a href="#" class="receipt-link">
+                <span class="material-icons icon-16">receipt</span> View Receipt
+              </a>
+            </div>
+            <div class="amount">₹10,000</div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h2><span class="material-icons">emoji_events</span> Your Impact</h2>
+          
+          <p>Your generous contributions have made a significant difference to your institution and its students.</p>
+          
+          <div class="impact-cards">
+            <div class="impact-card">
+              <div class="icon">🎓</div>
+              <div class="number">3</div>
+              <div class="label">Scholarships Funded</div>
+            </div>
+            
+            <div class="impact-card">
+              <div class="icon">📚</div>
+              <div class="number">50+</div>
+              <div class="label">Books Added to Library</div>
+            </div>
+            
+            <div class="impact-card">
+              <div class="icon">💻</div>
+              <div class="number">1</div>
+              <div class="label">Computer Lab Equipment</div>
+            </div>
+            
+            <div class="impact-card">
+              <div class="icon">🏆</div>
+              <div class="number">2</div>
+              <div class="label">Student Projects Funded</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/alumni-dash.js"></script>
+</body>
+</html>

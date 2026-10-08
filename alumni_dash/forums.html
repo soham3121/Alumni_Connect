@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forums - Alumni Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/alumni-dash-style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="../assets/logo.jpg" alt="Alumni Connect Logo">
+        </div>
+        <span>Alumni Connect</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-item"><i class="material-icons">dashboard</i>Dashboard</a>
+        <a href="alumni-directory.html" class="nav-item"><i class="material-icons">groups</i>Alumni Directory</a>
+        <a href="events.html" class="nav-item"><i class="material-icons">event</i>Events</a>
+        <a href="forums.html" class="nav-item active"><i class="material-icons">forum</i>Forums</a>
+        <a href="mentorship.html" class="nav-item"><i class="material-icons">school</i>Mentorship</a>
+        <a href="career-center.html" class="nav-item"><i class="material-icons">work</i>Career Center</a>
+        <a href="profile-settings.html" class="nav-item"><i class="material-icons">settings</i>Profile Settings</a>
+        <a href="give-back.html" class="nav-item"><i class="material-icons">volunteer_activism</i>Give Back</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="header">
+        <div class="welcome">Forums</div>
+        <div class="search">
+          <input type="text" placeholder="Search discussions...">
+        </div>
+        <div class="profile">
+          <div class="notification-badge">
+            <span>3</span>
+            <svg width="24" height="24" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+          </div>
+          <div class="user-info" onclick="showUserMenu()">
+            <span class="avatar">SM</span>
+            <span>Subhro Maitra</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="welcome-section">
+        
+        <p class="welcome-subtitle">Join discussions and share your thoughts with the alumni community</p>
+      </div>
+
+      <!-- Forum Categories -->
+      <div class="forum-cards">
+        <a href="#general" class="forum-card">
+          <i class="fas fa-comments card-icon"></i>
+          <div class="card-content">
+            <h2>General Discussions</h2>
+            <p>Share updates, ask questions, and discuss anything alumni-related with the community.</p>
+            <span class="tag">120 Topics</span>
+          </div>
+        </a>
+
+        <a href="#career" class="forum-card">
+          <i class="fas fa-briefcase card-icon"></i>
+          <div class="card-content">
+            <h2>Career Advice</h2>
+            <p>Get valuable tips from experienced alumni about jobs, industries, and career opportunities.</p>
+            <span class="tag">85 Topics</span>
+          </div>
+        </a>
+
+        <a href="#education" class="forum-card">
+          <i class="fas fa-graduation-cap card-icon"></i>
+          <div class="card-content">
+            <h2>Higher Studies</h2>
+            <p>Discuss masters programs, PhDs, universities, and get application tips from alumni.</p>
+            <span class="tag">50 Topics</span>
+          </div>
+        </a>
+
+        <a href="#tech" class="forum-card">
+          <i class="fas fa-microchip card-icon"></i>
+          <div class="card-content">
+            <h2>Tech & Innovation</h2>
+            <p>Talk about emerging technologies, startup ideas, research opportunities and innovations.</p>
+            <span class="tag">72 Topics</span>
+          </div>
+        </a>
+
+        <a href="#networking" class="forum-card">
+          <i class="fas fa-users card-icon"></i>
+          <div class="card-content">
+            <h2>Networking</h2>
+            <p>Connect with alumni, find mentors, and build professional relationships in your field.</p>
+            <span class="tag">45 Topics</span>
+          </div>
+        </a>
+
+        <a href="#entrepreneurship" class="forum-card">
+          <i class="fas fa-rocket card-icon"></i>
+          <div class="card-content">
+            <h2>Entrepreneurship</h2>
+            <p>Share startup experiences, get business advice, and connect with fellow entrepreneurs.</p>
+            <span class="tag">28 Topics</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="content-grid">
+        <!-- Recent Activity -->
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fas fa-clock section-icon"></i>
+              Recent Activity
+            </h2>
+          </div>
+          
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-dot blue"></div>
+              <div class="activity-content">
+                <h4>New Reply in Career Advice</h4>
+                <p><strong>Riya Sharma</strong> replied to "Tips for Resume Building" • 2 minutes ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot green"></div>
+              <div class="activity-content">
+                <h4>New Topic Created</h4>
+                <p><strong>Amit Verma</strong> started "Alumni Meetup 2025" in General Discussions • 15 minutes ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot orange"></div>
+              <div class="activity-content">
+                <h4>Popular Discussion</h4>
+                <p><strong>Sneha Patra</strong> replied to "AI Tools for Students" in Tech & Innovation • 1 hour ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot purple"></div>
+              <div class="activity-content">
+                <h4>New Member Joined</h4>
+                <p><strong>Karan Singh</strong> joined the Higher Studies forum • 3 hours ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-dot blue"></div>
+              <div class="activity-content">
+                <h4>Hot Topic</h4>
+                <p>"Remote Work Best Practices" gained 25+ replies in Career Advice • 5 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fas fa-bolt section-icon"></i>
+              Quick Actions
+            </h2>
+          </div>
+          
+          <div class="actions-list">
+            <div class="actions-grid">
+              <button class="action-card blue">
+                <i class="fas fa-plus action-icon blue"></i>
+                <span class="action-text">Create New Topic</span>
+              </button>
+
+              <button class="action-card green">
+                <i class="fas fa-search action-icon green"></i>
+                <span class="action-text">Search Discussions</span>
+              </button>
+
+              <button class="action-card orange">
+                <i class="fas fa-bookmark action-icon orange"></i>
+                <span class="action-text">My Bookmarks</span>
+              </button>
+
+              <button class="action-card blue">
+                <i class="fas fa-bell action-icon blue"></i>
+                <span class="action-text">Notification Settings</span>
+              </button>
+
+              <button class="action-card green">
+                <i class="fas fa-user-friends action-icon green"></i>
+                <span class="action-text">Find Alumni</span>
+              </button>
+
+              <button class="action-card orange">
+                <i class="fas fa-chart-line action-icon orange"></i>
+                <span class="action-text">Trending Topics</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popular Topics Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-fire section-icon"></i>
+            Trending Topics This Week
+          </h2>
+        </div>
+        
+        <div class="forum-cards">
+          <div class="card">
+            <h3>🔥 Remote Work Best Practices</h3>
+            <p><strong>Career Advice</strong> • 47 replies • Started by John Smith</p>
+            <p>Discussion about effective remote work strategies and tools...</p>
+          </div>
+
+          <div class="card">
+            <h3>💡 AI in Healthcare - Future Prospects</h3>
+            <p><strong>Tech & Innovation</strong> • 32 replies • Started by Dr. Priya Reddy</p>
+            <p>Exploring the potential of artificial intelligence in medical field...</p>
+          </div>
+
+          <div class="card">
+            <h3>🎓 MS in Computer Science - University Recommendations</h3>
+            <p><strong>Higher Studies</strong> • 28 replies • Started by Rahul Kumar</p>
+            <p>Looking for advice on best universities for MS in CS programs...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/alumni-dash.js"></script>
+</body>
+</html>

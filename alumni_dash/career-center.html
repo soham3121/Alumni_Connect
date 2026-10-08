@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Center - Alumni Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/alumni-dash-style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-image">
+          <img src="../assets/logo.jpg" alt="Alumni Connect Logo">
+        </div>
+        <span>Alumni Connect</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-item"><i class="material-icons">dashboard</i>Dashboard</a>
+        <a href="alumni-directory.html" class="nav-item"><i class="material-icons">groups</i>Alumni Directory</a>
+        <a href="events.html" class="nav-item"><i class="material-icons">event</i>Events</a>
+        <a href="forums.html" class="nav-item"><i class="material-icons">forum</i>Forums</a>
+        <a href="mentorship.html" class="nav-item"><i class="material-icons">school</i>Mentorship</a>
+        <a href="career-center.html" class="nav-item active"><i class="material-icons">work</i>Career Center</a>
+        <a href="profile-settings.html" class="nav-item"><i class="material-icons">settings</i>Profile Settings</a>
+        <a href="give-back.html" class="nav-item"><i class="material-icons">volunteer_activism</i>Give Back</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="header">
+        <div class="welcome">Career Center</div>
+        <div class="search">
+          <input type="text" placeholder="Search jobs, resources...">
+        </div>
+        <div class="profile">
+          <div class="notification-badge">
+            <span>3</span>
+            <svg width="24" height="24" fill="none" stroke="#888" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+          </div>
+          <div class="user-info" onclick="showUserMenu()">
+            <span class="avatar">SM</span>
+            <span>Subhro Maitra</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="career-header">
+        <div class="tabs">
+          <div class="tab active">Job Board</div>
+          <div class="tab">My Applications</div>
+          <div class="tab">Resume Builder</div>
+          <div class="tab">Resources</div>
+        </div>
+      </div>
+      
+      <div class="career-info">
+        <div class="info-card">
+          <span class="material-icons icon">work</span>
+          <h3>Job Opportunities</h3>
+          <p>Discover exclusive job opportunities shared by alumni and partner organizations specifically for our community.</p>
+        </div>
+        <div class="info-card">
+          <span class="material-icons icon">description</span>
+          <h3>Resume Support</h3>
+          <p>Access resume templates, review services, and personalized feedback to improve your job application materials.</p>
+        </div>
+        <div class="info-card">
+          <span class="material-icons icon">insights</span>
+          <h3>Career Resources</h3>
+          <p>Explore articles, guides, and tools to help you navigate your career path and professional development.</p>
+        </div>
+      </div>
+      
+      <div class="empty-state">
+        <span class="material-icons icon-64">work_outline</span>
+        <h2>No Job Listings Available</h2>
+        <p>There are currently no job listings available. Check back soon as alumni and partner organizations regularly share new opportunities with our network.</p>
+      </div>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/alumni-dash.js"></script>
+</body>
+</html>
